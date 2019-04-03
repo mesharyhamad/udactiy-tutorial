@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>min AND max-width Media Queries</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+      h1 {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        font-size: 6em;
+        font-family: Roboto;
+        transition: all 0.5s;
+      }
+     
+      @media screen and (max-width:751px) {
+   
+        p{
+         margin-left: 0;
+     }
+      }
+ 
+   
+      @media screen and (min-width:750px) {
+       .logo {
+            display: none;
+        }
+        p{
+            margin-left: 500px;
+     }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Media Queries</h1>
+      <p>Watch the background colors change!</p>
+      <img class="logo" src="udacity-wordmark.svg" alt="">
+    </div>
+  </body>
+</html>
+
+<script>
+
+  let instructor = 'James';
+  instructor = 'Richard';
+  console.log(instructor);
+  document.querySelector('callout');
+
+  // create a brand new <span> element
+  const newSpan = document.createElement('span');
+
+  newSpan.textContent="meshri othman!";
+  // select the first (main) heading of the page
+  const mainHeading = document.querySelector('h1');
+
+  // add the the <span> element as the last child element of the main heading
+  mainHeading.appendChild(newSpan);
+
+  const myPara = document.createElement('p');
+  const textOfParagraph = document.createTextNode('I am the text for the paragraph!');
+
+  myPara.appendChild(textOfParagraph);
+  document.body.appendChild(myPara);
+
+/*Question 4 of 4
+
+What happens after running this code */
+
+  const mainHeading = document.querySelector('#main-heading');
+  const otherHeading = document.querySelector('#other-heading');
+  const excitedText = document.createElement('span');
+
+  excitedText.textContent = '!!!';
+  mainHeading.appendChild(excitedText);
+  otherHeading.appendChild(excitedText);
+
+  //.insertAdjacentHTML()
+
+  const mainHeading = document.querySelector('#main-heading');
+  const htmlTextToAdd = '<h2>Skydiving is fun!</h2>';
+
+  mainHeading.insertAdjacentHTML('afterend', htmlTextToAdd);
+
+  const mainHeading = document.querySelector('h1');
+
+  mainHeading.parentElement.removeChild(mainHeading);
+
+  //rempove element
+  const mainHeading = document.querySelector('h1');
+
+  mainHeading.remove();
+
+  const itme = document.querySelector("p");
+  itme.style.width ="50%";
+
+  //
+  const mainHeading = document.querySelector('h1');
+
+  mainHeading.setAttribute('style', 'color: blue; background-color: orange; font-size: 3.5em;');
+
+  mainHeading.classList.add("meshari");
+</script>

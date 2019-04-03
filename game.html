@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>min AND max-width Media Queries</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        h1 {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            font-size: 6em;
+            font-family: Roboto;
+            transition: all 0.5s;
+        }
+
+
+    </style>
+</head>
+<body>
+<div>
+    <h1>Media Queries</h1>
+    <p>Watch the background colors change!</p>
+    <a href=""></a>
+
+    <span id="content">Meshari !</span>
+
+</div>
+</body>
+<script>
+
+   /* const elem = document.querySelector("h1");
+
+        document.addEventListener('click',function () {
+            elem.style.background="black";
+        });
+    document.removeEventListener('click',function () {
+
+    });
+
+*/
+  /* document.addEventListener('click', function () {
+       console.log('The document was clicked');
+   });
+
+   document.body.addEventListener('click', function () {
+       console.log('The body element was clicked');
+   }); */
+   const myCustomDiv = document.createElement('div');
+
+   function respondToTheClick(evt) {
+       console.log('A paragraph was clicked: ' + evt.target.textContent);
+       evt.target.remove();
+   }
+
+   for (let i = 1; i <= 200; i++) {
+       const newElement = document.createElement('p');
+       newElement.textContent = 'This is paragraph number ' + i;
+
+       myCustomDiv.appendChild(newElement);
+   }
+
+   document.body.appendChild(myCustomDiv);
+
+  /* myCustomDiv.addEventListener('click', respondToTheClick);
+
+   document.querySelector('#content').addEventListener('click', function (evt) {
+       console.log('A span was clicked with text ' + evt.target.textContent);
+   });*/
+
+  //nodeName to get the tage name ;
+   //The .nodeName property will return a capital string, not a lowercase one. So when you perform yo
+   document.querySelector('#content').addEventListener('click', function (evt) {
+       if (evt.target.nodeName === 'SPAN') {  // ← verifies target is desired element
+           console.log('A span was clicked with text ' + evt.target.textContent);
+           evt.target.remove();
+       }
+   });
+</script>
+</html>
